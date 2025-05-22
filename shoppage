@@ -1,0 +1,39 @@
+<!-- shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - WegoCiao</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>WegoCiao</h1></header>
+  <main>
+    <section class="banner">
+      <h2>Choose a Country of Your Choice</h2>
+    </section>
+    <section class="featured">
+      <h3>Korea</h3>
+      <img src="korea.jpg" alt="Korea">
+      <p>Experience the magic of Seoul and beyond.</p>
+    </section>
+    <section class="hotels">
+      <h3>Recommended Hotels</h3>
+      <ul>
+        <li>Takakura Shinjuku Hotel</li>
+        <li>Kaiseki Ryokan</li>
+        <li>Shibuya Capsule Hotel</li>
+      </ul>
+    </section>
+    <section class="accommodation">
+      <h3>Recommended Accommodation</h3>
+      <ul>
+        <li>Open space, 2 beds, near station</li>
+        <li>Lake view suite, 3 guests</li>
+      </ul>
+    </section>
+  </main>
+  <footer><p>&copy; 2025 WegoCiao</p></footer>
+</body>
+</html>

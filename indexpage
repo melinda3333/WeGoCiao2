@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WegoCiao - Travel Asia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>WegoCiao</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="detail.html">Destinations</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h2>TRAVEL AROUND ASIA WITH US!</h2>
+      <button>Start Now</button>
+    </section>
+    <section class="country-pick">
+      <h3>Pick the country of your choice!</h3>
+      <div class="countries">
+        <div><img src="japan.jpg" alt="Japan"><p>Japan</p></div>
+        <div><img src="korea.jpg" alt="Korea"><p>Korea</p></div>
+        <div><img src="china.jpg" alt="China"><p>China</p></div>
+      </div>
+    </section>
+    <section class="prices">
+      <h3>Ticket Prices</h3>
+      <ul>
+        <li>Japan: $877</li>
+        <li>Korea: $834</li>
+        <li>China: $810</li>
+      </ul>
+    </section>
+    <section class="promo">
+      <h3>Promo</h3>
+      <div class="promos">
+        <div><img src="disney.jpg" alt="Disney"><p>Disneyland Tokyo</p></div>
+        <div><img src="universal.jpg" alt="Universal"><p>Universal Studios Osaka</p></div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 WegoCiao</p>
+    </footer>
+  </main>
+</body>
+</html>

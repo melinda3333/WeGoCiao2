@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations - WeGoCiao</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .banner {
+    text-align: center;
+    padding: 2em;
+    background-color: #fae1d0;
+    border-bottom: 2px solid #e0bfa0;
+  }
+
+  .banner h2 {
+    font-size: 2em;
+    color: #a47148;
+  }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .logo {
+      width: 50px;
+    }
+
+    nav {
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    h2, h3 {
+      color: #a47148;
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    .dest-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1em;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+    }
+
+    .dest-list div {
+      background: #fff7f0;
+      padding: 1em;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .dest-list div:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .highlight {
+      max-width: 800px;
+      margin: 2em auto;
+      background: #fff7f0;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .highlight img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin: 1.5em auto;
+    }
+
+    .highlight p {
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 2em;
+    }
+
+    .back-button button {
+      background: #a47148;
+      color: white;
+      padding: 0.6em 1.2em;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .back-button button:hover {
+      background: #7f5539;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+      background: #fceee2;
+      color: #7a4d30;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="logo.png" alt="WeGoCiao Logo" class="logo" />
+      <h1>WegoCiao</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="detail.html">Destinations</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Available Destinations</h2>
+      <div class="dest-list">
+        <div>Japan</div>
+        <div>Korea</div>
+        <div>China</div>
+        <div>Indonesia</div>
+        <div>Taiwan</div>
+        <div>Thailand</div>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <h3>Program Example: Wonders of Asia</h3>
+      <img src="asia highlight.png" alt="Asia Highlight">
+      <p>Check out our 6 countries that we partner with to bring you to a wonderful experience and trip with your loved ones!</p>
+    </section>
+
+    <div class="back-button">
+      <button onclick="history.back()">← Back</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WeGoCiao</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - WegoCiao</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .banner {
+    text-align: center;
+    padding: 2em;
+    background-color: #fae1d0;
+    border-bottom: 2px solid #e0bfa0;
+  }
+
+  .banner h2 {
+    font-size: 2em;
+    color: #a47148;
+  }
+
+  .country-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin: 2em 0;
+  }
+
+  .country-selector button {
+    background: #a47148;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+  .country-selector button:hover {
+    background: #7f5539;
+  }
+
+  .country-section {
+    display: none;
+    max-width: 900px;
+    margin: 2em auto;
+    background: #fff7f0;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  </style>
+</head>
+<body>
+   <header>
+  <div class="logo-title">
+    <img src="logo.png" alt="WeGoCiao Logo" class="logo" />
+    <h1>WegoCiao</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="detail.html">Destinations</a>
+    <a href="profile.html">Profile</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="banner">
+      <h2>CHOOSE A COUNTRY OF YOUR CHOICE!</h2>
+    </section>
+
+    <!-- Country Buttons -->
+    <div class="country-selector">
+      <button onclick="showCountry('korea')">Korea</button>
+      <button onclick="showCountry('japan')">Japan</button>
+      <button onclick="showCountry('china')">China</button>
+    </div>
+
+    <!-- Korea -->
+    <div id="korea" class="country-section">
+      <section class="featured">
+        <h3>Korea</h3>
+        <img src="explore korea.png" alt="Korea">
+        <p>Take your “ME” time in this wonderful street that sells any clothing from top to bottom. Here is where you can have your shopping spree and enjoy your shopping time</p>
+      </section>
+      <section class="hotels">
+        <h4>Recommended Hotels</h4>
+        <ul>
+          <li>Seoul Grand Hotel</li>
+          <li>Busan Beach Resort</li>
+          <li>Jeju Nature Inn</li>
+        </ul>
+      </section>
+      <section class="accommodation">
+        <h4>Recommended Accommodation</h4>
+        <ul>
+          <li>City view studio, 2 beds</li>
+          <li>Jeju cottage with ocean view</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Japan -->
+    <div id="japan" class="country-section">
+      <section class="featured">
+        <h3>Japan</h3>
+        <img src="explore japan.png" alt="Japan">
+        <p>Enjoy your holiday in a wonderful spring time accompanied with cherry blossoms and a beautiful mount Fuji view</p>
+      </section>
+      <section class="hotels">
+        <h4>Recommended Hotels</h4>
+        <ul>
+          <li>Takakura Shinjuku Hotel</li>
+          <li>Kaiseki Ryokan</li>
+          <li>Shibuya Capsule Hotel</li>
+        </ul>
+      </section>
+      <section class="accommodation">
+        <h4>Recommended Accommodation</h4>
+        <ul>
+          <li>Tokyo apartment, near Shibuya crossing</li>
+          <li>Traditional Kyoto house with garden</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- China -->
+    <div id="china" class="country-section">
+      <section class="featured">
+        <h3>China</h3>
+        <img src="explore china.png" alt="China">
+        <p>Discover the Great Wall, Forbidden City, and bustling streets of Shanghai</p>
+      </section>
+      <section class="hotels">
+        <h4>Recommended Hotels</h4>
+        <ul>
+          <li>Beijing Royal Palace Hotel</li>
+          <li>Shanghai Skyline Inn</li>
+          <li>Xian Ancient Gate Lodge</li>
+        </ul>
+      </section>
+      <section class="accommodation">
+        <h4>Recommended Accommodation</h4>
+        <ul>
+          <li>Modern flat near The Bund</li>
+          <li>Beijing Hutong private stay</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="back-button">
+      <button onclick="history.back()">← Back</button>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2025 WeGoCiao</p></footer>
+
+  <script>
+    function showCountry(countryId) {
+      const sections = document.querySelectorAll('.country-section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(countryId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fefcf9;
+    color: #5e4632;
+  }
+  
+  /* Header and Footer */
+  header, footer {
+    background: #b08968;
+    color: white;
+    text-align: center;
+    padding: 1.2em;
+  }
+  
+  nav a {
+    color: #fff8f0;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  header {
+  text-align: center;
+  padding: 1.5em 1em;
+  background-color:#b08968 ;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+
+.logo-title img.logo {
+  height: 50px;
+  width: auto;
+}
+
+.logo-title h1 {
+  font-size: 2em;
+  color: #5e3c1b;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #a47148;
+}
+
+  /* Main layout */
+  main {
+    padding: 2em;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: #e6ccb2;
+    padding: 2.5em;
+    text-align: center;
+    color: #3e2f23;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  /* Section Spacing */
+  section {
+    margin-bottom: 2em;
+  }
+  
+  /* Grid Content */
+  .country-pick .countries,
+  .promo .promos,
+  .dest-list {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+  
+  .countries div,
+  .promos div,
+  .dest-list div {
+    background: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    transition: transform 0.3s ease;
+  }
+  
+  .countries div:hover,
+  .promos div:hover,
+  .dest-list div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Images */
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+/* Standardize Japan, Korea, China image size */
+.countries img {
+  width: 450px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Standardize Promo (Disneyland & Universal) image size */
+.promos img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+  /* Buttons */
+  button {
+    padding: 0.6em 1.5em;
+    background: #a47148;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #7f5539;
+  }
+  
+  /* Back Button */
+  .back-button {
+    text-align: center;
+    margin: 2em 0 1em;
+  }
+  
+  .back-button button {
+    background: #a47148;
+    color: white;
+    padding: 0.6em 1.5em;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .back-button button:hover {
+    background: #7f5539;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .countries,
+    .promos,
+    .dest-list {
+      flex-direction: column;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+      }
+      
+      .modal-content {
+        background-color: #fff7f0;
+        margin: 10% auto;
+        padding: 2em;
+        border: 1px solid #888;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
+        position: relative;
+      }
+      
+      .modal-content h2 {
+        text-align: center;
+        color: #a47148;
+      }
+      
+      .modal-content label {
+        display: block;
+        margin-top: 1em;
+        color: #5c3c23;
+        font-weight: bold;
+      }
+      
+      .modal-content input,
+      .modal-content textarea {
+        width: 100%;
+        padding: 0.6em;
+        margin-top: 0.5em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      
+      .modal-content button {
+        margin-top: 1.5em;
+        padding: 0.7em;
+        width: 100%;
+        background-color: #a47148;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      
+      .modal-content button:hover {
+        background-color: #7f5539;
+      }
+      
+      .close {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        font-size: 1.5em;
+        color: #333;
+        cursor: pointer;
+      }
+      
+  }
+  

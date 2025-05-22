@@ -1,0 +1,27 @@
+<!-- detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations - WegoCiao</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>WegoCiao</h1></header>
+  <main>
+    <section>
+      <h2>Available Destinations</h2>
+      <div class="dest-list">
+        <div>Japan</div><div>Korea</div><div>China</div>
+        <div>Indonesia</div><div>Taiwan</div><div>Thailand</div>
+      </div>
+    </section>
+    <section class="highlight">
+      <h3>Program Example: Wonders of Asia</h3>
+      <img src="asia.jpg" alt="Asia Highlight">
+    </section>
+  </main>
+  <footer><p>&copy; 2025 WegoCiao</p></footer>
+</body>
+</html>

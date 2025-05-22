@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Profile - WeGoCiao</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 2em auto;
+      background: #fff7f0;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #a47148;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+      color: #5c3c23;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 2em;
+      padding: 0.7em 1.5em;
+      background: #a47148;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background: #7f5539;
+    }
+
+    .profile-display p {
+      margin: 0.5em 0;
+      font-size: 1.1em;
+    }
+
+    .back-button {
+      margin-top: 2em;
+      text-align: center;
+    }
+
+    .back-button button {
+      width: auto;
+      padding: 0.5em 1em;
+    }
+    <style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: #fff7f0;
+    margin: 10% auto;
+    padding: 2em;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px; /* 👈 limits the size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content h2 {
+    text-align: center;
+    color: #a47148;
+  }
+
+  .modal-content label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+    color: #5c3c23;
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+  }
+
+  .modal-content button {
+    margin-top: 1.5em;
+    padding: 0.6em 1em;
+    background: #a47148;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .modal-content button:hover {
+    background: #7f5539;
+  }
+
+  .close {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #a47148;
+  }
+</style>
+  </style>
+</head>
+<body>
+   <header>
+  <div class="logo-title">
+    <img src="logo.png" alt="WeGoCiao Logo" class="logo" />
+    <h1>WegoCiao</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="detail.html">Destinations</a>
+    <a href="profile.html">Profile</a>
+  </nav>
+</header>
+  <main>
+    <div class="container">
+
+      <!-- Profile Form -->
+      <form id="profileForm">
+        <h2>Create Profile</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <button type="submit">Save Profile</button>
+      </form>
+
+      <!-- Display Saved Profile -->
+      <div id="profileDisplay" class="profile-display" style="display: none;">
+        <h2>My Profile</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <button onclick="editProfile()">Edit Profile</button>
+      </div>
+
+    </div>
+
+    <div class="back-button">
+      <button onclick="history.back()">← Back</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WeGoCiao</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("profileForm");
+    const profileDisplay = document.getElementById("profileDisplay");
+    const displayName = document.getElementById("displayName");
+    const displayEmail = document.getElementById("displayEmail");
+
+    function loadProfile() {
+      const name = localStorage.getItem("wegoName");
+      const email = localStorage.getItem("wegoEmail");
+
+      if (name && email) {
+        displayName.textContent = name;
+        displayEmail.textContent = email;
+        form.style.display = "none";
+        profileDisplay.style.display = "block";
+      }
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      localStorage.setItem("wegoName", name);
+      localStorage.setItem("wegoEmail", email);
+
+      loadProfile();
+    });
+
+    function editProfile() {
+      form.style.display = "block";
+      profileDisplay.style.display = "none";
+      document.getElementById("name").value = localStorage.getItem("wegoName");
+      document.getElementById("email").value = localStorage.getItem("wegoEmail");
+    }
+
+    // Load on page start
+    loadProfile();
+  </script>
+  <!-- Contact Us Button -->
+<div class="back-button" style="text-align: center; margin-top: 2em;">
+    <button onclick="openContactForm()">📩 Contact Us</button>
+  </div>
+  
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactForm()">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="contactName">Your Name</label>
+        <input type="text" id="contactName" name="contactName" required />
+  
+        <label for="contactEmail">Your Email</label>
+        <input type="email" id="contactEmail" name="contactEmail" required />
+  
+        <label for="contactMessage">Your Message</label>
+        <textarea id="contactMessage" name="contactMessage" rows="4" required></textarea>
+  
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>  
+</body>
+</html>
